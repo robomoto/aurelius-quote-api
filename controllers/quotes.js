@@ -14,8 +14,8 @@ exports.createQuote = async (req, res) => {
 }
 
 exports.getRandQuote = async (req, res) => {
-    const quote = await Quote.aggregate([{ $sample: { size: 1}}]);
-    return res.json(quote);
+    const quote = await Quote.aggregate([{$sample: { size: 1}}]); //using aggregate for random sample, returns array
+    return res.json(quote[0]); 
 }
 
 exports.getQuote = async (req, res) => {

@@ -10,7 +10,7 @@ const quoteRoutes = require('./routes/quotes');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use('/api/quotes', quoteRoutes);
+app.use('/api/quote', quoteRoutes);
 
 app.listen(port, (req, res) =>{
     console.log(`App listening on port ${port}`)

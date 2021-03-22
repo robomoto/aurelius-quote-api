@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 
 const Quote = require('./models/quotes');
 const bookOne  = require('./meditations/book1');
@@ -15,8 +15,8 @@ const bookEleven = require('./meditations/book11');
 const bookTwelve = require('./meditations/book12');
 const seedQuotes = [];
 
-const dbUrl = 'mongodb://localhost/quote_api';
-
+const dbUrl = process.env.dbUrl;
+console.log(dbUrl);
 const mongoose = require('mongoose');
 // mongoose.set('debug', true);
 mongoose.connect(dbUrl, { 

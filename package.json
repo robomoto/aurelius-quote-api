@@ -1,0 +1,16 @@
+{
+  "name": "quote_api",
+  "version": "1.0.0",
+  "description": "A JSON API for returning quotes from a MongoDB database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Douglass",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1"
+  }
+}

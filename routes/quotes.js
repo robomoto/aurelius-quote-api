@@ -5,9 +5,11 @@ const wrapAsync = require('../utils/wrapAsync');
 const { getQuotes, createQuote, getRandQuote, getQuote, updateQuote, deleteQuote } = require('../controllers/quotes')
 
 router.route('/')
-    //.get(wrapAsync(getQuotes))        //INDEX
+    // .get(wrapAsync(getQuotes))        //INDEX
     .get(wrapAsync(getRandQuote))       //RANDOM
     // .post(wrapAsync(createQuote))    //CREATE
+
+// router.get('/r', wrapAsync(getRandQuote))       //RANDOM
 
 router.route('/:quoteId')
     .get(wrapAsync(getQuote))           //SHOW

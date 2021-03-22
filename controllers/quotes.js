@@ -2,7 +2,8 @@
 const { Quote } = require('../models');
 
 exports.getQuotes = async (req, res) => {
-    const quotes = await Quote.find()
+    const quotes = await Quote.find({ 
+    });
     return res.json(quotes);
 }
 

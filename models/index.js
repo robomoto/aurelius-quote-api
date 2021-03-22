@@ -1,4 +1,4 @@
-const dbUrl = 'mongodb://localhost/quote_api';
+const dbUrl = process.env.dbUrl || 'mongodb://localhost/quote_api';
 
 const mongoose = require('mongoose');
 // mongoose.set('debug', true);
